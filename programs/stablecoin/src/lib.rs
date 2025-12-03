@@ -9,7 +9,7 @@ mod state;
 use error::*;
 mod error;
 
-declare_id!("9oGaNNvJSeetJsA24oWva7s2Ma6TDExngGhNtGDgXBqX");
+declare_id!("ba5yJtTq74tKvY6qSpKagSCDm3ba6S3t3r5CE7rc5VE");
 
 #[program]
 pub mod stablecoin {

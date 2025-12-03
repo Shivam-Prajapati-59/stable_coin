@@ -6,7 +6,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-stablecoin = "9oGaNNvJSeetJsA24oWva7s2Ma6TDExngGhNtGDgXBqX"
+stablecoin = "ba5yJtTq74tKvY6qSpKagSCDm3ba6S3t3r5CE7rc5VE"
 
 [registry]
 url = "https://api.apr.dev"
@@ -17,3 +17,17 @@ wallet = "~/.config/solana/id.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+[test]
+startup_wait = 5000
+shutdown_wait = 5000
+upgrade_program = false
+
+[test.validator]
+bind_address = "0.0.0.0"
+url = "https://api.mainnet-beta.solana.com"
+ledger = ".anchor/test-ledger"
+rpc_port = 8899
+
+[[test.validator.clone]]
+address = "7UVimffxr9ow1uXYxsr4LHAcV58mLzhmwaeKvJ1pjLiE"
